@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="title">
+            <img class="logo_j" src="img/user_logo.png" alt="">
+            <h1 class="ttt">Tic Tac Toe</h1>
+        </div>
+    </div>
+
+    </div>
     <div class="game-over d-none" id="newGame">
         <div class="container">
             <img class="game_over " id="gameOver" src="icons/gameOver.png">
@@ -22,20 +30,20 @@
         <div id="player_1">
             <img src="./icons/red.png ">Player 1
         </div>
-        <div class="player-inactive"  id="player_2">
+        <div class="player-inactive" id="player_2">
             <img src="./icons/blue.png">Player 2
         </div>
     </div>
 
     <div style="position: relative;">
-        <div id="line-1" class="horizontal-line" style="top: 62px; left: 31px"></div>
-        <div id="line-2" class="horizontal-line" style="top: 202px; left: 31px;"></div>
-        <div id="line-3" class="horizontal-line" style="top: 342px; left: 31px"></div>
-        <div id="line-4" class="horizontal-line make-vertical" style="top: 201px; right: 174px"></div>
-        <div id="line-5" class="horizontal-line make-vertical" style="top: 201px; left: 31px"></div>
-        <div id="line-6" class="horizontal-line make-vertical" style="top: 201px; left: 171px;"></div>
-        <div id="line-7" class="horizontal-line make-diagonal_1"></div>
-        <div id="line-8" class="horizontal-line make-diagonal_2"></div>
+        <div id="line-1" class="horizontal-line line-resp1" style="top: 62px; left: 31px"></div>
+        <div id="line-2" class="horizontal-line line-resp2" style="top: 202px; left: 31px;"></div>
+        <div id="line-3" class="horizontal-line line-resp3" style="top: 342px; left: 31px"></div>
+        <div id="line-4" class="horizontal-line make-vertical line-resp4" style="top: 201px; right: 174px"></div>
+        <div id="line-5" class="horizontal-line make-vertical line-resp5" style="top: 201px; left: 31px"></div>
+        <div id="line-6" class="horizontal-line make-vertical line-resp6" style="top: 201px; left: 171px;"></div>
+        <div id="line-7" class="horizontal-line make-diagonal_1 line-resp7"></div>
+        <div id="line-8" class="horizontal-line make-diagonal_2 line-resp8"></div>
         <table class="table">
             <tr>
                 <td onclick="fillShape(0)"><img id="blue-0" class="icon_blue d-none" src="./icons/blue.png "><img
@@ -68,10 +76,20 @@
     <br>
     <br>
     <br>
-    <div footer>
-        <a target="_blank" href="https://icons8.com/icon/0jVkvmv2FhKB/ausgef%C3%BCllter-kreis">Ausgefüllter Kreis</a>
-        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <div class="footer">
+        <div class="footer_info">
+            <a>Atributes</a><br>
+            <div class="atribute">
+                <a>Icons:&nbsp;</a>
+                <a target="_blank" href="https://icons8.com/icon/0jVkvmv2FhKB/ausgef%C3%BCllter-kreis">Ausgefüllter
+                    Kreis</a>
+                &nbsp;icon by &nbsp;<a target="_blank" href="https://icons8.com">Icons8</a>
+            </div><br>
+
+            <a>© Copyright 2022 by Juan de Santos. All Rights Reserved.</a>
+        </div>
     </div>
+
 </body>
 
 </html>
