@@ -3,6 +3,7 @@ let gameOver = false;
 let currentShape = 'blue';
 
 
+// show the shapes on the table
 function fillShape(id) {
     if (!fields[id] && !gameOver) {
         if (currentShape == 'blue') {
@@ -34,6 +35,7 @@ function fillShape(id) {
 }
 
 
+//show the the black line if a player do 3 shapes in line
 function winner() {
     let winner;
 
@@ -73,11 +75,28 @@ function winner() {
     if (winner) {
         //console.log('Gewonnen', winner)
         gameOver = true;
-        setTimeout(function() {
-            document.getElementById('gameOver').classList.remove('d-none');
+        setTimeout(function () {
+            document.getElementById('newGame').classList.remove('d-none');
         }, 2000);
-        
     }
+}
 
 
+// restart the game
+function newGame() {
+    gameOver = false;
+    fields = [];
+    currentShape = 'blue';
+    document.getElementById('newGame').classList.add('d-none');
+    document.getElementById('player_1').classList.remove('player-inactive');
+    document.getElementById('player_2').classList.add('player-inactive');
+
+    for (let i = 1; i < 9; i++) {
+        document.getElementById('line-' + i).style.transform = 'scaleX(0.0)';
+    }
+    
+    for (let i = 0; i < 9; i++) {
+        document.getElementById('blue-' + i).classList.add('d-none');
+        document.getElementById('red-' + i).classList.add('d-none');
+    }
 }

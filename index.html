@@ -12,51 +12,59 @@
 </head>
 
 <body>
-    <img class="game_over d-none" id="gameOver" src="icons/gameOver.png">
-    <div class="player_panel">
-        <div class="player-inactive" id="player_1">
-            <img  src="./icons/blue.png ">Player 1
+    <div class="game-over d-none" id="newGame">
+        <div class="container">
+            <img class="game_over " id="gameOver" src="icons/gameOver.png">
+            <button class="new_game" onclick="newGame()">Erneut</button>
         </div>
-        <div id="player_2">
-            <img  src="./icons/red.png">Player 2
+    </div>
+    <div class="player_panel">
+        <div id="player_1">
+            <img src="./icons/red.png ">Player 1
+        </div>
+        <div class="player-inactive"  id="player_2">
+            <img src="./icons/blue.png">Player 2
         </div>
     </div>
 
-    <div id="line-1" class="horizontal-line" style="top: 162px;"></div>
-    <div id="line-2" class="horizontal-line" style="top: 302px;"></div>
-    <div id="line-3" class="horizontal-line" style="top: 442px;"></div>
-    <div id="line-4" class="horizontal-line make-vertical" style="top: 301px; left: 235px"></div>
-    <div id="line-5" class="horizontal-line make-vertical" style="top: 301px;"></div>
-    <div id="line-6" class="horizontal-line make-vertical" style="top: 301px; right: 235px;"></div>
-    <div id="line-7" class="horizontal-line make-diagonal_1"></div>
-    <div id="line-8" class="horizontal-line make-diagonal_2"></div>
-    <table>
-        <tr>
-            <td onclick="fillShape(0)"><img id="blue-0" class="icon_blue d-none" src="./icons/blue.png "><img id="red-0"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(1)"><img id="blue-1" class="icon_blue d-none" src="./icons/blue.png "><img id="red-1"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(2)"><img id="blue-2" class="icon_blue d-none" src="./icons/blue.png "><img id="red-2"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-        </tr>
-        <tr>
-            <td onclick="fillShape(3)"><img id="blue-3" class="icon_blue d-none" src="./icons/blue.png "><img id="red-3"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(4)"><img id="blue-4" class="icon_blue d-none" src="./icons/blue.png "><img id="red-4"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(5)"><img id="blue-5" class="icon_blue d-none" src="./icons/blue.png "><img id="red-5"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-        </tr>
-        <tr>
-            <td onclick="fillShape(6)"><img id="blue-6" class="icon_blue d-none" src="./icons/blue.png "><img id="red-6"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(7)"><img id="blue-7" class="icon_blue d-none" src="./icons/blue.png "><img id="red-7"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-            <td onclick="fillShape(8)"><img id="blue-8" class="icon_blue d-none" src="./icons/blue.png "><img id="red-8"
-                    class="icon_red d-none" src="./icons/red.png"></td>
-        </tr>
+    <div style="position: relative;">
+        <div id="line-1" class="horizontal-line" style="top: 62px; left: 31px"></div>
+        <div id="line-2" class="horizontal-line" style="top: 202px; left: 31px;"></div>
+        <div id="line-3" class="horizontal-line" style="top: 342px; left: 31px"></div>
+        <div id="line-4" class="horizontal-line make-vertical" style="top: 201px; right: 174px"></div>
+        <div id="line-5" class="horizontal-line make-vertical" style="top: 201px; left: 31px"></div>
+        <div id="line-6" class="horizontal-line make-vertical" style="top: 201px; left: 171px;"></div>
+        <div id="line-7" class="horizontal-line make-diagonal_1"></div>
+        <div id="line-8" class="horizontal-line make-diagonal_2"></div>
+        <table class="table">
+            <tr>
+                <td onclick="fillShape(0)"><img id="blue-0" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-0" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(1)"><img id="blue-1" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-1" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(2)"><img id="blue-2" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-2" class="icon_red d-none" src="./icons/red.png"></td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(3)"><img id="blue-3" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-3" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(4)"><img id="blue-4" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-4" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(5)"><img id="blue-5" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-5" class="icon_red d-none" src="./icons/red.png"></td>
+            </tr>
+            <tr>
+                <td onclick="fillShape(6)"><img id="blue-6" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-6" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(7)"><img id="blue-7" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-7" class="icon_red d-none" src="./icons/red.png"></td>
+                <td onclick="fillShape(8)"><img id="blue-8" class="icon_blue d-none" src="./icons/blue.png "><img
+                        id="red-8" class="icon_red d-none" src="./icons/red.png"></td>
+            </tr>
 
-    </table>
+        </table>
+
+    </div>
     <br>
     <br>
     <br>

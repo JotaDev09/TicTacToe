@@ -46,6 +46,7 @@ td:hover {
 
 table {
     border-collapse: collapse;
+    position: relative;
 }
 
 table td {
@@ -85,15 +86,15 @@ table tr td:last-child {
 
 .make-diagonal_1 {
     width: 420px;
-    top: 300px; 
-    left: 338px;
+    top: 200px; 
+    left: -4px;
     transform: rotate(45deg) scaleX(0.0);
 }
 
 .make-diagonal_2 {
     width: 420px;
-    top: 300px; 
-    right: 338px;
+    top: 200px; 
+    right: -4px;
     transform: rotate(135deg) scaleX(0.0)
 }
 
@@ -120,9 +121,29 @@ table tr td:last-child {
 }
 
 .game_over {
+    animation: zoomIn 225ms ease-in-out;
+}
+
+.game-over {
     position: absolute;
     z-index: 2;
-    animation: zoomIn 225ms ease-in-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new_game {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #2A2A79;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 @keyframes zoomIn {
